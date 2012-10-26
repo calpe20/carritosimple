@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link type='text/css' rel='stylesheet' href='estilos.css'>
+    </head>
+    <body>
+        
+        <div id='formacceso'>
+        <form action="inicio.php" method="post">
+            <div id='titulo'>Formulario de Acceso</div>
+            <hr>
+            <label>Usuario : </label>
+            <input type='text' name=nombre required><br>
+            <label>Password : </label>
+            <input type='password' name=clave required><br>
+            <hr>
+            <input type='submit' value='Enviar'>
+            <input type='reset' value='Cancelar'>
+        </form>
+        </div>
+        <?php if(empty($_GET['mensaje'])){?>
+        <div id='mensaje'><?php echo $mensaje;?></div>
+        <? }?>
+    </body>
+</html>
